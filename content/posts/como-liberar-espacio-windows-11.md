@@ -7,7 +7,7 @@ author: "Whoami"
 category: "Windows"
 tags: ["Windows 11", "PC", "limpieza"]
 featured: true
-image: "/images/windows-storage.svg"
+image: "/images/como-liberar-espacio-windows-11.png"
 ---
 
 Cuando el disco se llena, Windows 11 se vuelve más lento, las actualizaciones fallan y las apps empiezan a comportarse de forma extraña. La buena noticia: puedes recuperar varios gigabytes en menos de 30 minutos sin instalar software de terceros.

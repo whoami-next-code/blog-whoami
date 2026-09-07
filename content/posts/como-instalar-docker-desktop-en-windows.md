@@ -7,7 +7,7 @@ author: "Whoami"
 category: "Herramientas"
 tags: ["Docker", "Windows", "WSL", "contenedores"]
 featured: false
-image: "/images/docker-windows.svg"
+image: "/images/como-instalar-docker-desktop-en-windows.png"
 ---
 
 Docker Desktop te permite ejecutar aplicaciones en contenedores sin complicarte con máquinas virtuales tradicionales. En Windows, la instalación correcta depende de WSL 2 y de la virtualización activada en el equipo.

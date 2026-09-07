@@ -7,7 +7,7 @@ author: "Whoami"
 category: "Next.js"
 tags: ["Next.js", "React", "TypeScript", "frontend"]
 featured: false
-image: "/images/nextjs-start.svg"
+image: "/images/como-empezar-a-programar-con-nextjs.png"
 ---
 
 Next.js es uno de los frameworks más populares para construir sitios y aplicaciones con React. Combina renderizado en servidor, rutas basadas en archivos y una experiencia de desarrollo muy productiva.

@@ -7,7 +7,7 @@ author: "Whoami"
 category: "JavaScript"
 tags: ["Node.js", "npm", "Windows", "desarrollo"]
 featured: true
-image: "/images/nodejs-windows.svg"
+image: "/images/como-instalar-nodejs-en-windows.png"
 ---
 
 Node.js es el runtime que permite ejecutar JavaScript fuera del navegador. Si quieres usar herramientas modernas como Next.js, Vite o npm, instalarlo correctamente en Windows es el primer paso.

@@ -7,7 +7,7 @@ author: "Whoami"
 category: "JavaScript"
 tags: ["npm", "Node.js", "errores", "debugging"]
 featured: true
-image: "/images/npm-errors.svg"
+image: "/images/como-solucionar-errores-comunes-npm.png"
 ---
 
 npm es fiable, pero sus mensajes de error pueden parecer crípticos la primera vez. Esta guía resume los problemas más habituales y cómo resolverlos sin perder una tarde entera.
