@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = "https://whoami.dev";
+const DEFAULT_SITE_URL = "https://whoami.business";
 
 function resolveSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();

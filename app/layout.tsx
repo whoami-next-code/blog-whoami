@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { AdSenseScript } from "@/components/AdSenseScript";
 import { siteConfig, absoluteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -69,6 +68,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        {/* Snippet exacto que pide AdSense entre <head></head> */}
+        <meta
+          name="google-adsense-account"
+          content={siteConfig.adsenseClient}
+        />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseClient}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         {/*
           Analytics placeholder:
@@ -76,7 +87,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           de Google Analytics / Plausible / etc. Preferible vía
           next/script en un componente Analytics.tsx dedicado.
         */}
-        <AdSenseScript />
         <ThemeProvider>
           <Header />
           <main className="flex-1">{children}</main>
