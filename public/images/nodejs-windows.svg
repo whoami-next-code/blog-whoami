@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Node.js en Windows">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="220" r="120" fill="#22c55e" opacity="0.25"/>
+  <rect x="140" y="160" width="620" height="310" rx="24" fill="#052e16"/>
+  <text x="180" y="240" fill="#bbf7d0" font-family="Consolas, monospace" font-size="34">$ node -v</text>
+  <text x="180" y="300" fill="#86efac" font-family="Consolas, monospace" font-size="34">v22.14.0</text>
+  <text x="180" y="380" fill="#bbf7d0" font-family="Consolas, monospace" font-size="34">$ npm -v</text>
+  <text x="180" y="440" fill="#86efac" font-family="Consolas, monospace" font-size="34">10.9.2</text>
+</svg>
