@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AdSenseScript } from "@/components/AdSenseScript";
 import { siteConfig, absoluteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -56,6 +57,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    "google-adsense-account": siteConfig.adsenseClient,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -72,6 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           de Google Analytics / Plausible / etc. Preferible vía
           next/script en un componente Analytics.tsx dedicado.
         */}
+        <AdSenseScript />
         <ThemeProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -24,6 +24,10 @@ export const siteConfig = {
   author: "Whoami",
   locale: "es_ES",
   twitterHandle: "@whoami",
+  /** Publisher ID de Google AdSense (formato ca-pub-xxxxxxxx). */
+  adsenseClient:
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() ||
+    "ca-pub-7923527211384947",
 } as const;
 
 export function absoluteUrl(path: string): string {

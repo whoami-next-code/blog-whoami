@@ -1,23 +1,52 @@
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site";
+import { AdUnit } from "@/components/AdUnit";
 
 type AdPlaceholderProps = {
   label?: string;
   className?: string;
   slot?: "sidebar" | "in-article" | "between-articles" | "footer";
+  /** ID de unidad de anuncio de AdSense (data-ad-slot). Opcional. */
+  adSlotId?: string;
 };
 
 /**
- * Espacio reservado para publicidad futura (p. ej. Google AdSense).
- * Sustituye este componente por el snippet real cuando actives anuncios.
+ * Espacio publicitario.
+ * - Con AdSense + adSlotId: unidad display manual.
+ * - Con AdSense sin adSlotId: reserva espacio (Auto ads gestiona el resto).
+ * - Sin AdSense: placeholder visual de desarrollo.
  */
 export function AdPlaceholder({
   label = "Espacio publicitario",
   className,
   slot = "sidebar",
+  adSlotId,
 }: AdPlaceholderProps) {
+  const adsEnabled = Boolean(siteConfig.adsenseClient);
+
+  if (adsEnabled && adSlotId) {
+    return (
+      <AdUnit
+        adSlotId={adSlotId}
+        className={className}
+        label={label}
+      />
+    );
+  }
+
+  if (adsEnabled) {
+    return (
+      <aside
+        data-ad-placement={slot}
+        aria-hidden
+        className={cn("min-h-[90px]", className)}
+      />
+    );
+  }
+
   return (
     <aside
-      data-ad-slot={slot}
+      data-ad-placement={slot}
       aria-label={label}
       className={cn(
         "flex min-h-[120px] items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-50 px-4 py-8 text-center dark:border-zinc-700 dark:bg-zinc-900/40",

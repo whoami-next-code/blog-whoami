@@ -133,15 +133,16 @@ Esa URL se usa en metadata canonical, Open Graph, `sitemap.xml` y `robots.txt`.
 - `/sitemap.xml`
 - `/robots.txt`
 
-## Publicidad (preparado, no activo)
+## Publicidad (Google AdSense)
 
-El componente `components/AdPlaceholder.tsx` reserva espacios para:
+AdSense ya está integrado con el publisher `ca-pub-7923527211384947`:
 
-- sidebar
-- dentro de artículos
-- entre listados
+- Script global en `components/AdSenseScript.tsx`
+- `public/ads.txt` para verificación de AdSense
+- Meta `google-adsense-account` en el layout
+- `AdPlaceholder` / `AdUnit` listos para unidades manuales cuando crees slots en AdSense
 
-Cuando actives AdSense, sustituye el placeholder por el snippet real sin cambiar la estructura de las páginas.
+Puedes sobrescribir el client ID con `NEXT_PUBLIC_ADSENSE_CLIENT` en Vercel.
 
 ## Analytics (preparado, no activo)
 
